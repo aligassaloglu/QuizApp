@@ -3,12 +3,16 @@ package com.example.quizapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_result.*
 
 class ActivityResult : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
+
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
         val correctAns = intent.getStringExtra(Constants.CORRECT_ANS)
         val totalQ = intent.getStringExtra(Constants.TOTAL_QUESTIONS)
         val user = intent.getStringExtra(Constants.USER_NAME)
