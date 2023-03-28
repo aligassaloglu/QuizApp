@@ -10,12 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
         <activity
+            android:name=".ActivityResult"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/noActionBarTheme"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
             android:name=".QuizQuestions"
             android:exported="true"
-            android:theme="@style/noActionBarTheme"
-            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/noActionBarTheme"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
